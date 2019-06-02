@@ -1,33 +1,44 @@
 <h1>Burgers</h1>
 
-<h2>Burgers Left</h2>
+<div class="container">
+<div id="leftover">
+<h2>Burgers Left:</h2>
 
 <ul>
   {{#each burgers}}
     {{#unless devoured}}
-      {{> burger/burger-block devoured=false}}
+      {{> burgers/burger-block devoured=false}}
     {{/unless}}
   {{/each}}
 </ul>
+</div>
+<div id="img-box">
 
+<img src="../public/assets/images/burger.jpg" alt="">
+</div>
+<div id="devoured">
 <h2>Burgers Devoured</h2>
 
 <ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> burger/burger-block devoured=true}}
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burgertwo-block devoured=true}}
     {{/if}}
   {{/each}}
 </ul>
-
-<h2>Add a Cat</h2>
+</div>
+</div>
+<div id="add-burger">
+  
+<h2>Add a Burger</h2>
 <form class="create-form">
 
   <div class="form-group">
-    <label for="ca">Cat Name:</label>
+    <label for="ca">Burger Name:</label>
     <input type="text" id="ca" name="name">
   </div>
  
 
   <button type="submit">Add burger</button>
 </form>
+</div>

@@ -1,0 +1,54 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("../images/backgroundburger.jpg");
+    background-size: 1600px 1000px;
+    background-repeat: no-repeat
+}
+h1 {
+    text-align: center;
+    font-size: 45px;
+    color: red;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+}
+h2 {
+    text-emphasis: bold;
+    text-decoration: underline;
+}
+#devoured {
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px
+}
+#leftover {
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px
+    
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#img-box {
+    display: flex;
+    background-image: url("../images/burger.jpg");
+    height: 200px;
+    width: 350px;
+    background-size: cover;
+    border-radius: 5px;
+}
+#add-burger {
+    
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    width: 55%;
+
+}

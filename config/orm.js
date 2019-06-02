@@ -9,18 +9,18 @@ var orm = {
                 throw new err("This is an err" + err )
 
             } 
-            cb(result)
+            cb(data)
         })
     },
     insertOne: function(burgerName, cb){
-        var queryString = `INSERT INTO burgers (burger_name, devoured) VALUES ("${burgerName}, false)`
+        var queryString = `INSERT INTO burgers (burger_name, devoured) VALUES ("${burgerName}", false)`
         connection.query(queryString, function(err, data){
             if (err)
             {
                 throw new err("This is an err" + err )
 
             } 
-            cb(result)
+            cb(data)
 
         })
     },
@@ -34,7 +34,7 @@ var orm = {
                 throw new err("This is an err" + err )
 
             } 
-            cb(result)
+            cb(data)
         })
     }
 }
