@@ -5,7 +5,7 @@ var burger = require("../models/burger.js")
 var router = express.Router();
 
 
-// Create all our routes and set up logic within those routes where required.
+
 router.get("/", function(req, res) {
   burger.all(function(data) {
 var hbsObject = {
@@ -21,7 +21,7 @@ router.post("/api/burgers", function(req, res) {
 
   console.log(burgerName);
   burger.create(req.body.name, function(result) {
-    // Send back the ID of the new quote
+    
     res.json({ id: result.insertId });
   });
 });
@@ -34,7 +34,7 @@ const burgerId = req.params.id
 
   burger.update(burgerId, "devoured", true, function(result) {
     if (result.changedRows == 0) {
-      // If no rows were changed, then the ID must not exist, so 404
+      
       return res.status(404).end();
     } else {
       res.status(200).end();
